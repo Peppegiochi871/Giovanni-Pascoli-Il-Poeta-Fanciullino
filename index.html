@@ -1,31 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni Pascoli | Il Fanciullino</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
-    <script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.42.0",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react/": "https://esm.sh/react@^19.2.4/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 </head>
+
 <body class="bg-stone-50 text-stone-900 overflow-x-hidden">
 
     <!-- Navigation -->
@@ -34,6 +29,7 @@
             <div class="text-xl font-bold tracking-tight text-stone-800 uppercase tracking-widest">
                 G. <span class="text-emerald-700">Pascoli</span>
             </div>
+
             <ul class="hidden md:flex space-x-8">
                 <li><a href="#home" class="text-sm font-medium text-stone-600 hover:text-emerald-700 transition-colors uppercase tracking-wider">Home</a></li>
                 <li><a href="#mondo" class="text-sm font-medium text-stone-600 hover:text-emerald-700 transition-colors uppercase tracking-wider">Mondo</a></li>
@@ -41,11 +37,23 @@
                 <li><a href="#poesia" class="text-sm font-medium text-stone-600 hover:text-emerald-700 transition-colors uppercase tracking-wider">Poesia</a></li>
                 <li><a href="#mappe" class="text-sm font-medium text-stone-600 hover:text-emerald-700 transition-colors uppercase tracking-wider">Mappe</a></li>
             </ul>
+
             <button id="mobile-menu-btn" class="md:hidden text-stone-600">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-200">
+            <ul class="flex flex-col p-4 space-y-4">
+                <li><a href="#home" class="text-stone-700">Home</a></li>
+                <li><a href="#mondo" class="text-stone-700">Mondo</a></li>
+                <li><a href="#poetica" class="text-stone-700">Poetica</a></li>
+                <li><a href="#poesia" class="text-stone-700">Poesia</a></li>
+                <li><a href="#mappe" class="text-stone-700">Mappe</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -65,6 +73,7 @@
                     <a href="#mondo" class="px-8 py-3 border border-stone-300 text-stone-800 rounded-full font-medium hover:bg-stone-100 transition-colors">Scopri di più</a>
                 </div>
             </div>
+
             <div class="flex-1 relative">
                 <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
                     <img src="https://picsum.photos/seed/pascoli/800/1000" alt="Giovanni Pascoli" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
@@ -74,35 +83,39 @@
         </div>
     </header>
 
-    <!-- AI Section: Mondo -->
+    <!-- Mondo -->
     <section id="mondo" class="py-24 bg-white reveal">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <span class="text-xs font-bold tracking-widest text-emerald-700 uppercase mb-4 block">L'Universo Pascoliano</span>
             <h2 class="text-3xl md:text-4xl serif font-bold mb-8 text-stone-800">Immagine del Mondo</h2>
-            <div id="ai-mondo-content" class="prose prose-stone mx-auto">
-                <p class="text-xl text-stone-600 leading-relaxed italic animate-pulse">Caricamento analisi AI...</p>
-            </div>
+            <p class="text-lg text-stone-600 leading-relaxed max-w-2xl mx-auto">
+                La visione del mondo di Pascoli è intrisa di simboli, mistero e un profondo legame con la natura. Il poeta osserva la realtà con occhi nuovi, guidato dalla sensibilità del fanciullino.
+            </p>
         </div>
     </section>
 
-    <!-- Poetica Cards -->
+    <!-- Poetica -->
     <section id="poetica" class="py-24 bg-stone-50 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl serif font-bold text-stone-800">Poetica e Simbolismo</h2>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Card 1 -->
                 <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all">
                     <div class="w-10 h-1 bg-emerald-700 mb-6 rounded-full"></div>
                     <h3 class="text-xl font-bold mb-4 text-stone-800">Il fanciullino come simbolo</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">Secondo Pascoli, dentro ogni uomo vive un piccolo fanciullo, una voce interiore che sa stupirsi di tutto ciò che vede e che sente.</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Secondo Pascoli, dentro ogni uomo vive un piccolo fanciullo, una voce interiore che sa stupirsi di tutto ciò che vede e che sente.
+                    </p>
                 </div>
-                <!-- Card 2 -->
+
                 <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all">
                     <div class="w-10 h-1 bg-emerald-700 mb-6 rounded-full"></div>
                     <h3 class="text-xl font-bold mb-4 text-stone-800">Il poeta come novello Adamo</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">Il poeta mette nome alle cose per la prima volta, scoprendo il mondo come se fosse sempre nuovo attraverso l'intuizione pura.</p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Il poeta mette nome alle cose per la prima volta, scoprendo il mondo come se fosse sempre nuovo attraverso l'intuizione pura.
+                    </p>
                 </div>
             </div>
         </div>
@@ -119,10 +132,13 @@
                         <p>Ritornava una rondine al tetto:<br/>l'uccisero: cadde tra spini:<br/>ella aveva nel becco un insetto:<br/>la cena dei suoi rondinini.</p>
                     </div>
                 </div>
+
                 <div class="space-y-8">
                     <div class="p-6 bg-stone-50 rounded-2xl border border-stone-200">
-                        <h4 class="font-bold text-stone-800 mb-2">Analisi AI della Poesia</h4>
-                        <p id="ai-poesia-analysis" class="text-sm text-stone-500 italic animate-pulse">Analisi in corso...</p>
+                        <h4 class="font-bold text-stone-800 mb-2">Analisi della poesia</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            La poesia “X Agosto” esprime il dolore universale attraverso immagini simboliche e profonde. La rondine uccisa diventa metafora dell’innocenza violata e del male che attraversa il mondo.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -133,6 +149,28 @@
     <footer class="py-12 border-t border-stone-200 text-center">
         <p class="text-stone-400 text-sm">© 2024 Sito Scolastico Giovanni Pascoli - Versione Statica</p>
     </footer>
-<script type="module" src="/index.tsx"></script>
+
+    <!-- Script -->
+    <script>
+        // Reveal animation
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const trigger = window.innerHeight * 0.85;
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < trigger) el.classList.add('active');
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Mobile menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 </html>
