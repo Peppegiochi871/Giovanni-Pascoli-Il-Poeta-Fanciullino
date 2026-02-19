@@ -1,0 +1,9 @@
+
+{
+  "name": "pascoli-statico",
+  "version": "1.0.0",
+  "description": "Sito statico puro su Giovanni Pascoli",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
