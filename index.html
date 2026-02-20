@@ -310,13 +310,42 @@
         </div>
     </section>
 
+    <!-- Sezione Video Approfondimento -->
+    <section id="video" class="py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <span class="text-emerald-600 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Risorse Multimediali</span>
+                <h2 class="text-4xl md:text-5xl serif font-bold text-stone-900 mb-6">Approfondimento <span class="italic text-emerald-700">Biografico</span></h2>
+                <p class="text-stone-500 max-w-2xl mx-auto leading-relaxed">
+                    Guarda questo documentario sulla vita e le opere di Giovanni Pascoli per comprendere meglio il contesto storico e umano dietro i suoi versi.
+                </p>
+            </div>
+            
+            <div class="reveal" style="transition-delay: 200ms;">
+                <div class="aspect-video w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-stone-50">
+                    <!-- Link YouTube Aggiornato -->
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/0fs87otyv_M" 
+                        title="Documentario Giovanni Pascoli" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-20 border-t border-stone-200 bg-white">
+    <footer class="py-20 border-t border-stone-200 bg-stone-50">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
             <p class="text-stone-400 text-xs font-medium tracking-widest uppercase">© Giovanni Pascoli - Progetto Didattico</p>
             <div class="flex gap-8">
-                <a href="#" class="text-stone-400 hover:text-emerald-700 transition-colors uppercase text-[10px] font-bold tracking-widest">Opere</a>
-                <a href="#" class="text-stone-400 hover:text-emerald-700 transition-colors uppercase text-[10px] font-bold tracking-widest">Contatti</a>
+                <a href="#home" class="text-stone-400 hover:text-emerald-700 transition-colors uppercase text-[10px] font-bold tracking-widest">Opere</a>
+                <a href="#vita" class="text-stone-400 hover:text-emerald-700 transition-colors uppercase text-[10px] font-bold tracking-widest">Biografia</a>
+                <a href="#video" class="text-stone-400 hover:text-emerald-700 transition-colors uppercase text-[10px] font-bold tracking-widest">Video</a>
             </div>
         </div>
     </footer>
